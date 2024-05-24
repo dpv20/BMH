@@ -8,5 +8,6 @@ services:
       - .:/app
     ports:
       - "8000:8000"
-    env_file:
-      - .env
+    environment:
+      - DJANGO_SECRET_KEY= 'django-insecure-gl!-n1$8=le)wzu412vb%h&f#k-z6bsskxp11^m*ow^382v61q'
+      - DJANGO_DEBUG = False
