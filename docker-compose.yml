@@ -3,11 +3,11 @@ version: '3'
 services:
   web:
     build: .
-    command: gunicorn myproject.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn BMH.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - .:/app
+      - ./BMH:/app
     ports:
       - "8000:8000"
     environment:
-      - DJANGO_SECRET_KEY=django-insecure-gl!-n1$8=le)wzu412vb%h&f#k-z6bsskxp11^m*ow^382v61q
+      - DJANGO_SECRET_KEY=7c5IKdixytesOzsLq4v5XbixmhorI0xPQMDfMw1g3zSXVPwoyPExs6r5Gawqpg2VP3bsy1g0A6XLzVkU
       - DJANGO_DEBUG=False
